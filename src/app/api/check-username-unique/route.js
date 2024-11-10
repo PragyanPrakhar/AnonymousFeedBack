@@ -7,6 +7,7 @@ const UsernameQuerySchema = z.object({
     username: usernameValidation,
 });
 export async function GET(request) {
+    //Now a days Next automatically handles this thing.
     /* if (request.method !== "GET") {
         return Response.json(
             {
