@@ -7,10 +7,11 @@ import {
     Row,
     Section,
     Text,
-    Button,
+    
 } from "@react-email/components";
 
-export default function VerificationEmail({ username, otp }) {
+export default function VerificationEmail({ username, verifyCode }) {
+    console.log("Otp iss :-> ",verifyCode);
     return (
         <Html lang="en" dir="ltr">
             <Head>
@@ -26,7 +27,7 @@ export default function VerificationEmail({ username, otp }) {
                     fontStyle="normal"
                 />
             </Head>
-            <Preview>Here's your verification code: {otp}</Preview>
+            <Preview>Here's your verification code: {verifyCode}</Preview>
             <Section>
                 <Row>
                     <Heading as="h2">Hello {username},</Heading>
@@ -38,7 +39,8 @@ export default function VerificationEmail({ username, otp }) {
                     </Text>
                 </Row>
                 <Row>
-                    <Text>{otp}</Text>
+                    
+                    <Text>{verifyCode}</Text>
                 </Row>
                 <Row>
                     <Text>

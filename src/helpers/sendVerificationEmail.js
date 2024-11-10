@@ -8,6 +8,7 @@ export async function sendVerificationEmail(username, email, verifyCode) {
             subject: 'Verification Code',
             react: VerificationEmail({username,verifyCode})
           });
+          console.log("Verification Email",verifyCode);
         return {
             success: true,
             message: "verification email sent successfully",
