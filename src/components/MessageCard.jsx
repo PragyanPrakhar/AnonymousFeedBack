@@ -19,12 +19,14 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "./ui/button";
+
 import { X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const MessageCard = ({ message, onMessageDelete }) => {
     const { toast } = useToast();
     const handleDeleteConfirm = async () => {
+        //TODO: Implement delete message in the backend
         const response = await axios.delete(
             `api/delete-message/${message._id}`
         );
